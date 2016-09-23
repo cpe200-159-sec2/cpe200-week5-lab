@@ -38,15 +38,15 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
         try {
             binaryCalculator.add();
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -67,15 +67,15 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
         try {
             binaryCalculator.subtract();
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -96,15 +96,15 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
         try {
             binaryCalculator.multiply();
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -125,15 +125,15 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
         try {
             assertEquals("-1", binaryCalculator.division());
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -145,7 +145,7 @@ public class BinaryCalculatorTest {
         binaryCalculator.setSecondOperand(secondOperand);
         try {
             binaryCalculator.division();
-            fail("The operation must raise an exception");
+            fail("The operation must raise an exceptioncheck");
         } catch (ArithmeticException ex) {
             assertTrue(true);
         }
@@ -159,15 +159,15 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
         try {
             binaryCalculator.division();
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -188,15 +188,15 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
         try {
             binaryCalculator.power();
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -217,16 +217,16 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
 
         try {
             assertEquals("0", binaryCalculator.add());
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -247,16 +247,16 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
 
         try {
             assertEquals("-2", binaryCalculator.subtract());
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -277,16 +277,16 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
 
         try {
             assertEquals("-1", binaryCalculator.multiply());
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -307,16 +307,16 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
 
         try {
             assertEquals("-1", binaryCalculator.division());
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -328,7 +328,7 @@ public class BinaryCalculatorTest {
         binaryCalculator.setSecondOperand(secondOperand);
         try {
             binaryCalculator.division();
-            fail("The operation must raise an exception");
+            fail("The operation must raise an exceptioncheck");
         } catch (ArithmeticException ex) {
             assertTrue(true);
         }
@@ -342,16 +342,16 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
 
         try {
             binaryCalculator.division();
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -372,16 +372,16 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
 
         try {
             assertEquals("-8", binaryCalculator.power());
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -402,16 +402,16 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
 
         try {
             assertEquals("0", binaryCalculator.add());
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -432,16 +432,16 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
 
         try {
             binaryCalculator.subtract();
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -462,16 +462,16 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
 
         try {
             binaryCalculator.multiply();
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -492,16 +492,16 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
 
         try {
             binaryCalculator.division();
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -513,7 +513,7 @@ public class BinaryCalculatorTest {
         binaryCalculator.setSecondOperand(secondOperand);
         try {
             binaryCalculator.division();
-            fail("The operation must raise an exception");
+            fail("The operation must raise an exceptioncheck");
         } catch (Exception ex) {
             assertTrue(true);
         }
@@ -527,16 +527,16 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
 
         try {
             binaryCalculator.division();
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
@@ -546,7 +546,7 @@ public class BinaryCalculatorTest {
         secondOperand = new Operand(2.0);
         binaryCalculator.setFirstOperand(firstOperand);
         binaryCalculator.setSecondOperand(secondOperand);
-        assertEquals("9", binaryCalculator.multiply());
+        assertEquals("9", binaryCalculator.power());
     }
 
     @Test
@@ -557,16 +557,16 @@ public class BinaryCalculatorTest {
             binaryCalculator.setFirstOperand(firstOperand);
             binaryCalculator.setSecondOperand(secondOperand);
         } catch (Exception ex) {
-            fail("Not expect exception here");
+            fail("Not expect exceptioncheck here");
         }
 
         try {
             binaryCalculator.power();
-            fail("Expect an exception to be thrown before here");
+            fail("Expect an exceptioncheck to be thrown before here");
         } catch (RuntimeException ex) {
             assertTrue(true);
         } catch (Exception ex) {
-            fail("Expect runtime exception, but the other is thrown");
+            fail("Expect runtime exceptioncheck, but the other is thrown");
         }
     }
 
