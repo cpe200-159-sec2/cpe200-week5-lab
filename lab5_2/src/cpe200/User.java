@@ -4,8 +4,8 @@ package cpe200;
  * Created by pruet on 6/9/2559.
  */
 public class User {
-    public String userName;
-    public String password;
+    private String userName;
+    private String password;
 
     public User() {
     }

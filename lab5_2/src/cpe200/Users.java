@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Created by pruet on 12/9/2559.
  */
 public class Users {
-    public ArrayList<User> userList;
+    private ArrayList<User> userList;
 
     public void addUser(User user)
     {
@@ -46,5 +46,13 @@ public class Users {
     public User[] getUserArray()
     {
         return null;
+    }
+
+    public ArrayList<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(ArrayList<User> userList) {
+        this.userList = userList;
     }
 }
