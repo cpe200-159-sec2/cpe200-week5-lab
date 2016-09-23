@@ -4,26 +4,39 @@ package cpe200;
  * Created by pruet on 6/9/2559.
  */
 public class User {
-    public String userName;
-    public String password;
+    private String userName;
+    private String password;
 
     public User() {
+
     }
 
     public String setUserName(String name) {
-        return null;
+        if (name.matches("^[A-Za-z][A-Za-z0-9]{7,}$")){
+            String tmp = userName;
+            userName = name;
+            return tmp;
+        }else{
+            throw new RuntimeException("Invalid name");
+        }
     }
 
     public int setPassword(String name) {
-        return 0;
+        if (name.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{12,}$")) {
+            password = name;
+            return password.length();
+        }else{
+            throw new RuntimeException("Invalid password");
+        }
     }
 
     public String getUserName() {
 
-        return null;
+        return userName;
     }
 
     public String getPassword() {
-        return null;
+
+        return password;
     }
 }
