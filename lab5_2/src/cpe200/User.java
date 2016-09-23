@@ -11,19 +11,31 @@ public class User {
     }
 
     public String setUserName(String name) {
-        return null;
+        String regex = "^[A-Za-z][a-zA-Z0-9]{7,}$";
+        String nameBefore = this.userName;
+        if(name.matches(regex)) {
+            userName = name;
+            return nameBefore;
+        }
+        else throw new RuntimeException("ERROR");
     }
 
     public int setPassword(String name) {
-        return 0;
+        String check = "^((?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]))([A-Za-z0-9]){12,}$";
+        if (name.matches(check)) {
+            password = name;
+            return name.length();
+        }
+        else throw new RuntimeException("ERROR");
     }
 
     public String getUserName() {
 
-        return null;
+        return userName;
     }
 
     public String getPassword() {
-        return null;
+
+        return password;
     }
 }
