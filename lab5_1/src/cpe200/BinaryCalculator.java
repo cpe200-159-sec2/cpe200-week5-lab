@@ -23,17 +23,17 @@ public class BinaryCalculator {
 
     public String add() throws RuntimeException {
         if(getFirstOperand().intValue()<0||getSecondOperand().intValue()<0)throw new RuntimeException("ERROR");
-        return  firstOperand.add(secondOperand).stripTrailingZeros().toString();
+        return  getFirstOperand().add(getSecondOperand()).stripTrailingZeros().toString();
     }
 
     public String subtract() throws RuntimeException {
         if(getFirstOperand().intValue()<0||getSecondOperand().intValue()<0)throw new RuntimeException("ERROR");
-        return  firstOperand.subtract(secondOperand).stripTrailingZeros().toString();
+        return  getFirstOperand().subtract(getSecondOperand()).stripTrailingZeros().toString();
     }
 
     public String multiply() throws RuntimeException {
         if(getFirstOperand().intValue()<0||getSecondOperand().intValue()<0)throw new RuntimeException("ERROR");
-        return firstOperand.multiply(secondOperand).stripTrailingZeros().toString();
+        return getFirstOperand().multiply(getSecondOperand()).stripTrailingZeros().toString();
     }
 
     /* This method should throw an exception when divide by zero */
@@ -41,12 +41,12 @@ public class BinaryCalculator {
         if(getSecondOperand().toString()=="0"||getSecondOperand().intValue()<0||getFirstOperand().intValue()<0){
             throw new RuntimeException("Error");
         }
-        return firstOperand.divide(secondOperand,5,BigDecimal.ROUND_HALF_UP).stripTrailingZeros().toString();
+        return getFirstOperand().divide(getSecondOperand(),5,BigDecimal.ROUND_HALF_UP).stripTrailingZeros().toString();
     }
 
     public String power() throws RuntimeException {
         if(getFirstOperand().intValue()<0||getSecondOperand().intValue()<0)throw new RuntimeException("ERROR");
-        return firstOperand.pow(secondOperand.intValue()).stripTrailingZeros().toString();
+        return getFirstOperand().pow(getSecondOperand().intValue()).stripTrailingZeros().toString();
     }
 
     public BigDecimal getSecondOperand() {
