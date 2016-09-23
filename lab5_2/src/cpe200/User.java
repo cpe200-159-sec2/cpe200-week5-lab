@@ -4,26 +4,38 @@ package cpe200;
  * Created by pruet on 6/9/2559.
  */
 public class User {
-    public String userName;
-    public String password;
+    private String userName;
+    private String password;
+    protected String USER_NAME_PATTERN = "^([A-Za-z])([A-Za-z0-9]{7,})$";
+    protected String PASSWORD_PATTERN = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])([A-Za-z0-9]){12,}$";
 
     public User() {
     }
 
-    public String setUserName(String name) {
-        return null;
+    public boolean setUserName(String name) {
+        if (name.matches(USER_NAME_PATTERN)) {
+            this.userName = name;
+            return true;
+        } else
+            return false;
     }
 
-    public int setPassword(String name) {
-        return 0;
+    public boolean setPassword(String password) {
+        if(password.matches(PASSWORD_PATTERN)) {
+            this.password = password;
+            return true;
+        }
+        else
+            return false;
     }
 
     public String getUserName() {
 
-        return null;
+        return this.userName;
     }
 
     public String getPassword() {
-        return null;
+
+        return this.password;
     }
 }
