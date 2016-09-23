@@ -10,20 +10,47 @@ public class User {
     public User() {
     }
 
+    public User(String user, String pass) {
+        userName = user;
+        password = pass;
+    }
+
     public String setUserName(String name) {
-        return null;
+        String regex = "^[A-Za-z][A-Za-z0-9]{7,}$";
+        if (name.matches(regex))
+        {
+            String ret = userName;
+            this.userName = name;
+            return ret;
+        }
+        else
+        {
+            throw new RuntimeException("Invalid username");
+        }
+
     }
 
     public int setPassword(String name) {
-        return 0;
+        String regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])([a-zA-Z0-9]{12,})$";
+        if (name.matches(regex))
+        {
+            int ret = name.length();
+            password = name;
+            return ret;
+        }
+        else
+        {
+            throw new RuntimeException("Invalid Password");
+        }
+
     }
 
     public String getUserName() {
 
-        return null;
+        return userName;
     }
 
     public String getPassword() {
-        return null;
+        return password;
     }
 }
