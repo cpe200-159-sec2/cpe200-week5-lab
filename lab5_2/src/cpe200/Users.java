@@ -9,50 +9,72 @@ import java.util.ArrayList;
 public class Users {
     private ArrayList<User> userList;
 
-    public void addUser(User user)
-    {
-    }
+    public Users(){
 
-    public void addUser(String userName, String password)
-    {
+        userList = new ArrayList<>();
     }
+    public void addUser(User user) {
 
-    public void deleteUser(User user)
-    {
+        userList.add(user);
 
     }
 
-    public boolean exists(User user)
-    {
-        return false;
+    public void addUser(String userName, String password) {
+
+        User tmp = new User();
+
+        tmp.setPassword(password) ;
+        tmp.setUserName(userName);
+
+        userList.add(tmp);
+    }
+
+    public void deleteUser(User user) {
+
+        if(userList.isEmpty()) throw new RuntimeException() ;
+        userList.remove(user);
+
+
+    }
+
+    public boolean exists(User user) {
+
+        return  userList.contains(user) ;
+
     }
 
     public boolean usernameExists(String username)
     {
-        return false;
+        for(int i = 0 ; i<userList.size() ; i++){
+
+            if(userList.get(i).getUserName() == username){
+                return true;
+            }
+
+        }
+        return  false;
     }
 
     /* This method should return null when the user with username is not in the list */
-    public User getUserByUsername(String userName)
-    {
-        return null;
+    public User getUserByUsername(String userName) {
+
+        for(int i = 0 ; i<userList.size() ; i++){
+
+            if(userList.get(i).getUserName() == userName){
+                return userList.get(i);
+            }
+
+        }
+        return  null;
     }
 
     public int count()
     {
-        return 0;
+        return userList.size();
     }
 
-    public User[] getUserArray()
-    {
-        return null;
-    }
+    public User[] getUserArray() {
 
-    public ArrayList<User> getUserList() {
-        return userList;
-    }
-
-    public void setUserList(ArrayList<User> userList) {
-        this.userList = userList;
+        return userList.toArray(new User[userList.size()]);
     }
 }
