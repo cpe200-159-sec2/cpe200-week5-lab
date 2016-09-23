@@ -12,25 +12,25 @@ public class User {
     public User() {
     }
 
-    public boolean setUserName(String name) {
-        userName = name;
-
+    public String  setUserName(String name) {
+        String namefake = this.userName;
         if(name.matches(user)) {
-            return true;
+            userName = name;
+            return namefake;
         }
         else {
-            return false;
+            throw new RuntimeException();
         }
     }
 
-    public boolean setPassword(String name) {
+    public int setPassword(String name) {
         password = name;
 
         if(name.matches(pass)) {
-            return true;
+            return name.length();
         }
         else {
-            return false;
+            throw new RuntimeException();
         }
     }
 
