@@ -4,26 +4,43 @@ package cpe200;
  * Created by pruet on 6/9/2559.
  */
 public class User {
-    public String userName;
-    public String password;
+    private String userName;
+    private String password;
 
     public User() {
     }
 
-    public String setUserName(String name) {
-        return null;
+    public User(String username,String password){
+        setUserName(username);
+        setPassword(password);
     }
 
-    public int setPassword(String name) {
-        return 0;
+
+
+    public String setUserName(String name) throws RuntimeException {
+        if(name.length()>=8&&name.matches("^[A-Za-z][A-Za-z0-9]+$")){
+            String temp = this.userName;
+            this.userName = name;
+            return temp;
+        }else {
+            throw new RuntimeException("Wrong input");
+        }
+    }
+
+    public int setPassword(String name) throws RuntimeException {
+        if(name.length()>=12&&name.matches("^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])[A-Za-z0-9]+")){
+            this.password = name;
+            return this.password.length();
+        }else {
+            throw new RuntimeException("Wrong input");
+        }
     }
 
     public String getUserName() {
-
-        return null;
+        return userName;
     }
 
     public String getPassword() {
-        return null;
+        return password;
     }
 }

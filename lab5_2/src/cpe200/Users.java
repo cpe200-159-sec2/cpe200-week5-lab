@@ -1,6 +1,5 @@
 package cpe200;
 
-
 import java.util.ArrayList;
 
 /**
@@ -9,42 +8,67 @@ import java.util.ArrayList;
 public class Users {
     public ArrayList<User> userList;
 
+    public Users(){
+        userList = new ArrayList<User>();
+    }
+
     public void addUser(User user)
     {
+        userList.add(user);
     }
 
     public void addUser(String userName, String password)
     {
+        User user = new User(userName,password);
+        userList.add(user);
     }
 
-    public void deleteUser(User user)
+    public void deleteUser(User user) throws RuntimeException
     {
-
+        if(exists(user)){
+            userList.remove(user);
+        }else {
+            throw new RuntimeException("User Not Found!");
+        }
     }
 
     public boolean exists(User user)
     {
-        return false;
+        if(userList.contains(user)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public boolean usernameExists(String username)
     {
+        for(int i=0; i<userList.size(); i++){
+            if(userList.get(i).getUserName().equals(username)){
+                return true;
+            }
+        }
         return false;
     }
 
     /* This method should return null when the user with username is not in the list */
     public User getUserByUsername(String userName)
     {
+        for(int i=0; i<userList.size(); i++){
+            if(userList.get(i).getUserName().equals(userName)){
+                return userList.get(i);
+            }
+        }
         return null;
     }
 
     public int count()
     {
-        return 0;
+        return userList.size();
     }
 
     public User[] getUserArray()
     {
-        return null;
+        return userList.toArray(new User[userList.size()]);
     }
 }
