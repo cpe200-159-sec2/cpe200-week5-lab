@@ -582,7 +582,7 @@ public class BinaryCalculatorTest {
     @Test
     public void operandDirectAccess() throws Exception {
         Field field = Operand.class.getDeclaredField("operand");
-       assertFalse(Modifier.isPublic(field.getModifiers()));
+        assertFalse(Modifier.isPublic(field.getModifiers()));
 
         field = BinaryCalculator.class.getDeclaredField("firstOperand");
         assertFalse(Modifier.isPublic(field.getModifiers()));
