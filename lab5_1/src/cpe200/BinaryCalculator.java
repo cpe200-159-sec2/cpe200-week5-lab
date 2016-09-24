@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 public class BinaryCalculator {
     private Operand firstOperand;
     private Operand secondOperand;
-    private BigDecimal first , second , result,x ;
+    private BigDecimal first , second , result ;
 
     public BinaryCalculator() {
         Operand firstOperand = new Operand(0);
