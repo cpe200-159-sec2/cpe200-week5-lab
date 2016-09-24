@@ -546,7 +546,7 @@ public class BinaryCalculatorTest {
         secondOperand = new Operand(2.0);
         binaryCalculator.setFirstOperand(firstOperand);
         binaryCalculator.setSecondOperand(secondOperand);
-        assertEquals("9", binaryCalculator.multiply());
+        assertEquals("9", binaryCalculator.power());
     }
 
     @Test
@@ -582,7 +582,7 @@ public class BinaryCalculatorTest {
     @Test
     public void operandDirectAccess() throws Exception {
         Field field = Operand.class.getDeclaredField("operand");
-       assertFalse(Modifier.isPublic(field.getModifiers()));
+        assertFalse(Modifier.isPublic(field.getModifiers()));
 
         field = BinaryCalculator.class.getDeclaredField("firstOperand");
         assertFalse(Modifier.isPublic(field.getModifiers()));
